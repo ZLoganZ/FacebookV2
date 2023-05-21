@@ -13,7 +13,7 @@ spring:
       max-request-size: 15MB
 
 jwt:
-  secret: gS10SK2gBgL0gK7KqLf76KzK1gS0Kfg0KDzSg6eeS1SKBfODKg0K1e7zLqK6
+  secret: bmd1eWVuaG9hbmdoYWkyMDE2MTA1MWNhY2NvbmduZ2hlcGhhbm1vaQ==
 logging:
   file:
     name: logs/facebook-version2.log
