@@ -9,20 +9,16 @@ import com.ceofacebook.facebookv2.securities.JwtUserDetails;
 import com.ceofacebook.facebookv2.exceptions.UserNotFoundAuthenticationException;
 import com.ceofacebook.facebookv2.exceptions.InvalidException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.Date;
-import java.util.HashMap;
 
 @Slf4j
 @RestController
@@ -33,8 +29,6 @@ public class AuthenticationController {
     private final CustomUserDetailsService customUserDetailsService;
 
     private final JwtTokenUtils jwtTokenUtils;
-
-    private final RestTemplate restTemplate = new RestTemplate();
 
     public AuthenticationController(AuthenticationManager authenticationManager, CustomUserDetailsService customUserDetailsService,
                                     JwtTokenUtils jwtTokenUtils) {
